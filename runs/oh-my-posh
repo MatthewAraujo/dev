@@ -1,0 +1,9 @@
+
+#!/usr/bin/env bash
+sudo apt install unzip
+
+echo "install oh-my-posh"
+curl -s https://ohmyposh.dev/install.sh | bash -s
+
+mkdir -p $HOME/.config/ohmyposh && $HOME/.config/ohmyposh/zen.toml
+echo "installed oh-my-posh"
