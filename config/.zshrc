@@ -6,6 +6,7 @@ alias gp='git push'
 
 
 # PATH GO
+GOPATH=$HOME/go  PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 export PATH=$PATH:/usr/local/go/bin
 
 # PATH BIn
