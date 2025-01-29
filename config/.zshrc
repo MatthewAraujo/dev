@@ -3,14 +3,30 @@ alias gi="git init"
 alias ga="git add ."
 alias gcm='git commit -m'
 alias gp='git push'
+alias dcu='docker compose up'
+alias dcd='docker compose down'
 
+
+# code
+
+export PATH=$PATH:/mnt/c/Users/matth/AppData/Local/Programs/Microsoft\ VS\ Code/bin
 
 # PATH GO
 GOPATH=$HOME/go  PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 export PATH=$PATH:/usr/local/go/bin
 
+# PATH COMMIT_MESSAGE
+PATH="$PATH:/home/aurora/bin"
+
 # PATH BIn
 PATH=$PATH:/home/aurora/.local/bin
+
+# ASDF
+. "$HOME/.asdf/asdf.sh"
+
+fpath=(${ASDF_DIR}/completions $fpath) 
+autoload -Uz compinit && compinit
+
 # Set the directory we want to store zinit and plugins
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
@@ -83,3 +99,10 @@ eval "$(zoxide init --cmd cd zsh)"
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# bun completions
+[ -s "/home/aurora/.bun/_bun" ] && source "/home/aurora/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

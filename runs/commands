@@ -1,2 +1,3 @@
 curl -s https://sh.rustup.rs | bat
 sudo apt install exa
+sudo apt install make
